@@ -51,7 +51,7 @@ export default function App() {
   const [loading,setloading] = useState(false)
 
   const fetchweatherforecast = ()=> {
-    axios.get(`http://api.weatherapi.com/v1/forecast.json?key=2ae7404a6dd04b94a36120340240605&q=${city}&days=6&aqi=no&alerts=no`)
+    axios.get(`http://api.weatherapi.com/v1/forecast.json?key={APIKEY}&q=${city}&days=6&aqi=no&alerts=no`)
     .then(data=>{
       setcontent(data.data)
       setloading(true)
